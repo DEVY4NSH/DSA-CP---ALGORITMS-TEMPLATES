@@ -8,17 +8,22 @@
 #define yes cout<<"YES"<<endl;
 #define no cout<<"NO"<<endl;
 #define all(x) x.begin(),x.end()
-const int M = 1e9+7;
 #define pb push_back
+#define pp pop_back
+#define f1 first
+#define f2 second
+const int M = 1e9+7;
 
--->precomp : precomputing factorial
--->factorial : function
--->binexp snip
+//-->precomp : precomputing factorial
+//-->factorial : function
+//-->binexp snippet
+//-->mergesort snippet
+//-->inversion count
 
 using namespace std;
 
 void solve(){
-    ${}
+  	
 }
 
 signed main()
