@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+
+#define int long long 
+#define loop(i,start,end) for(int i=start;i<end;++i)
+#define veci vector<int> 
+#define pr pair<int,int>
+#define mpp map<int,int> 
+#define yes cout<<"YES"<<endl;
+#define no cout<<"NO"<<endl;
+#define all(x) x.begin(),x.end()
+const int M = 1e9+7;
+#define pb push_back
+
+-->precomp : precomputing factorial
+-->factorial : function
+-->binexp snip
+
+using namespace std;
+
+void solve(){
+    ${}
+}
+
+signed main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+ 
+    int tc;
+    cin>>tc;
+    while(tc--)
+    {
+        solve();
+    }
+    return 0;
+}

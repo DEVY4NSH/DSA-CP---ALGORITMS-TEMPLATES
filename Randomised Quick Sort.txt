@@ -1,0 +1,23 @@
+int random_partition(vector<int> &v,int lo,int hi){
+    srand(time(NULL));
+    int random = lo + rand()%(hi-lo);
+    swap(v[random],v[hi]);
+    int pivot = v[hi];
+    int pi = lo;
+    for(int i=lo;i<hi;++i){
+        if(v[i]<=pivot){
+            swap(v[pi],v[i]);
+            pi++;
+        }
+    }
+    swap(v[pi],v[hi]);
+    return pi;
+}
+
+void quicksort(vector<int> &v,int lo,int hi){
+    if(lo<hi){
+        int pi = random_partition(v,lo,hi);
+        quicksort(v,lo,pi-1);
+        quicksort(v,pi+1,hi);
+    }
+}

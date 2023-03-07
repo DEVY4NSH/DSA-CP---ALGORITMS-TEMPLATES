@@ -1,0 +1,42 @@
+int Merge(int v[],int l,int mid,int r){
+	int inv_cnt=0;
+	int l1 = mid-l+1;
+	int l2 = r-mid;
+	int a[l1];
+	int b[l2];
+	loop(i,0,l1){
+		a[i] = v[l+i];
+	}
+	loop(i,0,l2){
+		b[i] = v[mid+i+1];
+	}
+	int i=0,j=0,k=l;
+	while(i<l1 and j<l2){
+		if(a[i]<=b[j]){
+			v[k] = a[i];
+			i++;k++;
+		}
+		else{
+			v[k] = b[j];
+			inv_cnt+= l1-i;
+			j++;k++;
+		}
+	}
+	while(i<l1){v[k]=a[i];i++;k++;}
+	while(j<l2){v[k]=b[j];j++;k++;}
+	return inv_cnt;
+}
+ 
+int invMergeSort(int v[],int l, int r){
+	int inv_cnt=0;
+	if(l < r){
+		int mid = (l+r)/2;
+		inv_cnt += invMergeSort(v,l,mid);
+		// cout<<inv_cnt<<" ";
+		inv_cnt += invMergeSort(v,mid+1,r);
+		// cout<<inv_cnt<<" ";
+		inv_cnt += Merge(v,l,mid,r);
+		// cout<<inv_cnt<<" ";
+	}
+	return inv_cnt;
+}
